@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <button>click me</button>
+    </div>
+    <script>
+        const btn =document.querySelector("button");
+        const parent =document.querySelector("#wrapper");
+        btn.addEventListener("click",() => 
+        {
+
+            const para = document.createElement("p");
+            para.innerHTML ="khushu"
+            // document.querySelectorAll("#wrapper").append(para);
+            parent.insertBefore(para,btn)
+
+            const clone =para.cloneNode(true)
+            wrapper.appendChild(clone)
+
+
+        })
+    </script>
+</body>
+</html>
